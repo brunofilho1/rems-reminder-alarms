@@ -1,0 +1,38 @@
+.alarm-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .alarm {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+
+    &:hover {
+      box-shadow: rgba(99, 99, 99, 1) 0px 2px 8px 0px;
+      cursor: pointer;
+    }
+
+    .alarm-left {
+      padding: 0;
+      margin: 0;
+
+      h2 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      span {
+        font-size: 44px;
+        margin: 0;
+      }
+    }
+  }
+}

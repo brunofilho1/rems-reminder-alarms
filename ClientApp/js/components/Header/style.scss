@@ -1,0 +1,19 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  background: #202020;
+  padding: 1rem;
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-item {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.time-picker-container {
+  border: 1px solid;
+  border-color: lightgray;
+  border-radius: 4px;
+  padding: 1px;
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+
+.left-time-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .MuiTimePickerToolbar-hourMinuteLabel.MuiTimePickerToolbar-hourMinuteLabelLandscape.css-1r3tc0d-MuiTimePickerToolbar-hourMinuteLabel {
+    width: 140px;
+    margin-top: 50%;
+    padding: 0.5rem;
+  }
+}

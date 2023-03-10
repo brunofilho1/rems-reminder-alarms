@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Rems - @ViewData["Title"]</title>
+
+    <link rel="icon" href="~/images/favicon.ico" type="image/x-icon">
+
+    <environment names="Staging,Production">
+        <link rel="stylesheet" asp-href-include="~/dist/assets/main.*.css" />
+    </environment>
+
+</head>
+
+<body>
+    <div id="react-header"></div>
+    <environment names="Development">
+        <script type="module">
+            import RefreshRuntime from '@Url.Content("~/dist/@react-refresh")'
+            RefreshRuntime.injectIntoGlobalHook(window)
+            window.$RefreshReg$ = () => {}
+            window.$RefreshSig$ = () => (type) => type
+            window.__vite_plugin_react_preamble_installed__ = true
+        </script>
+        <script type="module" src="~/dist/js/react-header.tsx"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script type="module" asp-src-include="~/dist/assets/react-header.*.js"></script>
+    </environment>
+
+    <main role="main" class="container">
+
+        @RenderBody()
+
+    </main>
+
+    <environment names="Development">
+        <script type="module" src="~/dist/@@vite/client"></script>
+        <script type="module" src="~/dist/js/main.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script type="module" asp-src-include="~/dist/assets/main.*.js"></script>
+    </environment>
+
+    @RenderSection("scripts", false)
+
+</body>
+</html>

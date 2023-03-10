@@ -1,0 +1,18 @@
+<!-- Nested layout -->
+@{
+    Layout = "_Layout";
+}
+
+@RenderBody()
+
+@section scripts
+{
+    <environment names="Development">
+        <script type="module" src="~/dist/js/classic-jquery.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script type="module" asp-src-include="~/dist/assets/classic-jquery.*.js"></script>
+    </environment>
+
+    @RenderSection("scripts", required: false)
+}
